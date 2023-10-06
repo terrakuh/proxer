@@ -1,0 +1,10 @@
+FROM fedora:38
+
+RUN dnf -y update && \
+	dnf -y install git git-lfs cmake gcc clang gdb python3-pip && \
+	pip install cmakelang && \
+	dnf clean all
+
+RUN dnf -y update && \
+	dnf -y install chromedriver libcurl-devel libgit2-devel ImageMagick && \
+	dnf clean all

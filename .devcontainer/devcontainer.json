@@ -1,0 +1,26 @@
+{
+	"name": "C++",
+	"build": {
+		"context": "..",
+		"dockerfile": "Containerfile"
+	},
+	"runArgs": [
+		"--network=host",
+		"--cap-add=CAP_SYS_PTRACE",
+		"--security-opt",
+		"label=disable"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"josetr.cmake-language-support-vscode",
+				"ms-vscode.cmake-tools",
+				"cheshirekow.cmake-format",
+				"albert.TabOut",
+				"gruntfuggly.todo-tree",
+				"mhutchie.git-graph"
+			]
+		}
+	}
+}
